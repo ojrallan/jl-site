@@ -55,7 +55,7 @@ header .container {
 
 .hero {
   height: 500px;
-  background-image: url("/images/hero-img.jpg");
+  background-image: url("images/hero-img.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
