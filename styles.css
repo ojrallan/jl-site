@@ -693,10 +693,10 @@ footer h4 {
     justify-content: center;
     align-items: center;
     height: auto;
-    /* width: 100%;
-    margin: 0 auto;
-    padding: 10px; */
-   
+  }
+
+  #contact-intro{
+    font-size: var(--tiny-text);
   }
 
   .details-container {
@@ -718,7 +718,19 @@ footer h4 {
   }
 
   .form-container form input{
-    height: 15px;
+    height: 20px;
+  }
+
+  .phone-contact-container{
+    height: 30px;
+  }
+
+  .call-link-btn{
+    height: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .send-btn {
