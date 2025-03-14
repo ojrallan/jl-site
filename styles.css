@@ -451,6 +451,7 @@ footer h4 {
     font-size: 10px;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
   }
 
   #hamburger-menu {
@@ -476,26 +477,31 @@ footer h4 {
   .hero {
     height: 250px;
     width: 100%;
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     background-color: gray;
   }
 
   .hero-text-container {
     text-align: center;
     width: 100%;
-    margin: 0 auto;
+  
     padding-top: 30px;
   }
   .hero-text-container h4 {
     font-size: 14px;
   }
   .hero-text-container h2 {
-    font-size: 18px;
+    font-size: 28px;
+    line-height: 26px;
     width: 80%;
     margin: 0 auto;
   }
   .hero-text-container p {
+    display:none;
     font-size: 10px;
     line-height: 20px;
     width: 80%;
@@ -509,6 +515,7 @@ footer h4 {
     margin-top: 5px;
     cursor: pointer;
     font-size: var(--tiny-text);
+    margin-top: 20px;
   }
   .mvc-container-mobile {
     display: block;
@@ -720,6 +727,7 @@ footer h4 {
     border: none;
     color: white;
     width: 100px;
+    height: 30px;
     margin: 0 auto;
     cursor: pointer;
     padding: 2px 5px;
