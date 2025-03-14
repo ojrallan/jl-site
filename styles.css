@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgba(62, 208, 8, 0.842);
+  --primary-color: rgba(0, 0, 133, 0.842);
   --secondary-color: rgb(255, 82, 19);
   --tertiary-color: gray;
   --tiny-text: 10px;
@@ -434,6 +434,8 @@ footer h4 {
   /* Styles for devices with a max width of 767px (smartphones in portrait mode) */
   body {
     width: 100vw;
+    margin: 0 auto;
+    padding: 0;
     line-height: 14px;
   }
 
@@ -591,6 +593,15 @@ footer h4 {
     flex-direction: column;
     height: auto;
     margin-top: 5px;
+    
+  }
+
+  .services-grid-intro p{
+    font-size: var(--tiny-text);
+  }
+
+  .loan-item p{
+    font-size: var(--tiny-text);
   }
 
   .services-image {
