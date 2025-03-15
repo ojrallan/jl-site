@@ -8,9 +8,8 @@
 * {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-
 }
-html{
+html {
   overflow-x: hidden;
 }
 
@@ -28,8 +27,9 @@ header {
 
 header .container {
   height: 44px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
@@ -107,6 +107,7 @@ header .container {
 .mvc-items {
   width: 300px;
   height: 140px;
+
   background-color: white;
   padding: 8px;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
@@ -383,6 +384,7 @@ header .container {
 
 footer {
   height: 250px;
+  width: 100%;
   background-color: var(--primary-color);
   margin-top: 34px;
   display: flex;
@@ -408,12 +410,11 @@ footer {
   flex-direction: column;
 }
 
-.mobile-footer-items-container{
-  display: none
+.mobile-footer-items-container {
+  display: none;
 }
 
-#about-company-footer{
-  
+#about-company-footer {
   height: 50px;
 }
 
@@ -492,7 +493,7 @@ footer h4 {
   .hero-text-container {
     text-align: center;
     width: 100%;
-  
+
     padding-top: 30px;
   }
   .hero-text-container h4 {
@@ -505,7 +506,7 @@ footer h4 {
     margin: 0 auto;
   }
   .hero-text-container p {
-    display:none;
+    display: none;
     font-size: 10px;
     line-height: 20px;
     width: 80%;
@@ -524,6 +525,10 @@ footer h4 {
   .mvc-container-mobile {
     display: block;
     margin-top: 10px;
+  }
+
+  .mvc-items {
+    max-width: 400px;
   }
 
   .mvc-items-container {
@@ -579,6 +584,8 @@ footer h4 {
   .services-grid-intro p {
     font-size: var(--medium-text);
     line-height: 18px;
+    max-width: 500px;
+    margin: 0 auto;
     text-align: center;
   }
 
@@ -604,22 +611,20 @@ footer h4 {
     flex-direction: column;
     height: auto;
     margin-top: 5px;
-    
   }
 
-  .services-grid-intro p{
+  .services-grid-intro p {
     font-size: var(--tiny-text);
   }
 
-  .loan-item p{
+  .loan-item p {
     font-size: var(--tiny-text);
   }
 
   .services-image {
     background-color: var(--primary-color);
     padding: 5px;
-   
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -686,11 +691,10 @@ footer h4 {
     font-size: 10px;
   }
 
-  .contact{
+  .contact {
     padding: 0px;
     font-size: var(--medium-text);
   }
-
 
   .contact-container {
     display: flex;
@@ -699,7 +703,7 @@ footer h4 {
     height: auto;
   }
 
-  #contact-intro{
+  #contact-intro {
     font-size: var(--tiny-text);
   }
 
@@ -712,7 +716,7 @@ footer h4 {
     padding: 10px;
   }
 
-  .form-container form{
+  .form-container form {
     margin-top: 5px;
     display: flex;
     height: auto;
@@ -721,15 +725,15 @@ footer h4 {
     padding: 2px;
   }
 
-  .form-container form input{
+  .form-container form input {
     height: 20px;
   }
 
-  .phone-contact-container{
+  .phone-contact-container {
     height: 30px;
   }
 
-  .call-link-btn{
+  .call-link-btn {
     height: 30px;
     padding: 0;
     display: flex;
@@ -749,50 +753,57 @@ footer h4 {
     padding: 2px 5px;
   }
 
-  footer{
+  footer {
     width: 100%;
     display: block;
     height: auto;
   }
 
-  .footer-items-container{
+  .footer-items-container {
     font-size: 10px;
     height: 100px;
   }
 
-  #div-1{
+  #div-1 {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
 
-  .lg-footer-items{
+  .lg-footer-items {
     display: none;
   }
 
-  .mobile-footer-items-container{
+  .mobile-footer-items-container {
     width: 70%;
     display: flex;
     align-items: start;
     justify-content: center;
   }
 
-  .links, .address{
+  .links,
+  .address {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  #about-company-footer{
+  #about-company-footer {
     padding: 0;
+    max-width: 500px;
   }
 
-  #about-company-footer h3,p{
+  #about-company-footer h3,
+  p {
     text-align: center;
   }
 
-  .mobile-footer-items-container .footer-items-container{
+  .mobile-footer-items-container {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .mobile-footer-items-container .footer-items-container {
     width: 100%;
     text-align: center;
     display: flex;
@@ -800,34 +811,77 @@ footer h4 {
     align-items: baseline;
     padding: 2px;
   }
-
-
 }
 
-
-
-
 /* For smaller tablets */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   body {
     width: 100vw;
+  }
+  #hamburger-menu {
+    display: block;
+    width: 20px;
+  }
+
+  .menu-bar-list-items {
+    z-index: 10;
+    color: white;
+    display: none;
+  }
+
+  .mvc-items {
+    min-height: 140px;
+    height: auto;
+  }
+
+  .mvc-items {
+    font-size: 14px;
+  }
+
+  header hr,
+  .container-address,
+  .container-contact,
+  .nav-container {
+    display: none;
+  }
+
+  header .container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    font-size: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
   }
 }
 
 /* Small Laptop Devices */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1025px) {
   /* Styles for small laptops or larger tablets */
+
   header {
     color: white;
     background-color: var(--primary-color);
     padding: 20px 32px 10px 32px;
+    width: 100svw;
+    max-width: 1200px;
   }
 
-  header .container {
+  /* header .container {
     height: 44px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-bottom: 10px;
+  } */
+
+  header .container {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 900px;
+    max-width: 1024px;
   }
 
   .company-logo {
@@ -852,5 +906,13 @@ footer h4 {
 
   #hamburger-menu {
     display: none;
+  }
+
+  .hero {
+    width: 100%;
+  }
+  .mvc-items-container {
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
