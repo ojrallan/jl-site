@@ -434,7 +434,7 @@ footer h4 {
   /* Styles for devices with a max width of 767px (smartphones in portrait mode) */
   body {
     width: 100vw;
-    margin: 0 auto;
+    overflow-x: hidden;
     padding: 0;
     line-height: 14px;
   }
@@ -613,8 +613,8 @@ footer h4 {
 
   .services-image {
     background-color: var(--primary-color);
-    padding: 10px;
-    width: 100%;
+    padding: 5px;
+   
     
     display: flex;
     justify-content: center;
@@ -752,7 +752,7 @@ footer h4 {
   }
 
   .footer-items-container{
-    font-size: 8px;
+    font-size: 10px;
     height: 100px;
   }
 
@@ -767,12 +767,16 @@ footer h4 {
   }
 
   .mobile-footer-items-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
   }
 
-  #about-company-footer h3{
+  #about-company-footer{
+    padding: 0;
+  }
+
+  #about-company-footer h3,p{
     text-align: center;
   }
 
@@ -782,7 +786,7 @@ footer h4 {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    padding: 5px;
+    padding: 2px;
   }
 
 
